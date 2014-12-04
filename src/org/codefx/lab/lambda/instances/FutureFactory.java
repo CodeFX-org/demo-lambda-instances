@@ -17,7 +17,7 @@ public class FutureFactory {
 	 *
 	 * @return a new {@link Future}
 	 */
-	static Future<Integer> createWithDefaultResult() {
+	public static Future<Integer> createWithDefaultResult() {
 		ImmediateFuture<Integer> immediateFuture = () -> 0;
 		return immediateFuture;
 	}
@@ -27,7 +27,7 @@ public class FutureFactory {
 	 *
 	 * @return a new {@link Future}
 	 */
-	static Future<Integer> createWithRandomResult() {
+	public static Future<Integer> createWithRandomResult() {
 		ImmediateFuture<Integer> immediateFuture = new ImmediateFuture<Integer>() {
 
 			@Override
@@ -45,7 +45,7 @@ public class FutureFactory {
 	 *            the {@link Future#get() result} of the returned future
 	 * @return a new {@link Future}
 	 */
-	static Future<Integer> createWithResult(Integer result) {
+	public static Future<Integer> createWithResult(Integer result) {
 		ImmediateFuture<Integer> immediateFuture = () -> result;
 		return immediateFuture;
 	}
